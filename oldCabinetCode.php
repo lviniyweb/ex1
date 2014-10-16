@@ -319,7 +319,7 @@ if(!isset($uri_array[2])){
 						$_POST['description_info'] = strip_tags($_POST['description_info']);
 						$_POST['text'] = strip_tags($_POST['text']);
 					}
-					
+			//no sql insection			
                     db_update("company", array(
                         'header' => $_POST['header'],
                         'contact' => $_POST['contact'],
@@ -372,6 +372,7 @@ if(!isset($uri_array[2])){
                 $dateadd = date("Y-m-d");
                 $_POST['id_wifi'] = (isset($_POST['id_wifi'])?1:0);
                 $_POST['id_parking'] = (isset($_POST['id_parking'])?1:0);
+                //no sql insection
                 db_insert("company", array(
                             'header' => $_POST['header'],
                             'contact' => $_POST['contact'],
