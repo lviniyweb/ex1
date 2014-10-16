@@ -114,7 +114,4 @@ class PaymentController extends Controller {
 		}
 	} 
 	
-	private function priceValidate($dataSet, $price, $cur){
-		//$dataSet['']
-	}
 }
