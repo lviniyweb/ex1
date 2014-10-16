@@ -43,6 +43,7 @@ include 'main.php';
 			}
 		}
 	}
+//get url's category
 	function getURIcategory($name){
 		$data = file_get_contents(DOCUMENT_ROOT.'/data/categories.dat');
 		if(empty($data)){
@@ -61,9 +62,9 @@ include 'main.php';
 		}
 	}
 	
-	
-	$russion = db_rows("SELECT * FROM domins WHERE is_show and is_ua = 0 ORDER BY sort");
-	$ukraine = db_rows("SELECT * FROM domins WHERE is_show and is_ua = 1 ORDER BY sort");
+	//get domins name from DB
+	$russion = db_rows("SELECT id,name FROM domins WHERE is_show and is_ua = 0 ORDER BY sort");
+	$ukraine = db_rows("SELECT id,name FROM domins WHERE is_show and is_ua = 1 ORDER BY sort");
 	
 	
 	
