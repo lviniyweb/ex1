@@ -2,11 +2,8 @@
 
 <?
 include 'main.php';
-
+//get places for sity list
 	function getPlaces(){
-		
-		
-		
 		$data = file_get_contents(DOCUMENT_ROOT.'/data/city.dat');
 		if(empty($data)){
 			$gis_category = file_get_contents('http://catalog.api.2gis.ru/project/list?version=1.3&key=rulmkn8285');
@@ -28,7 +25,7 @@ include 'main.php';
 		return $city;
 	}
 	$city = getPlaces();
-	
+//get categories from API	
 	function getNameCat($alias){
 		$data = file_get_contents(DOCUMENT_ROOT.'/data/categories.dat');
 		if(empty($data)){
